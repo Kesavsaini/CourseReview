@@ -13,7 +13,7 @@ const Navbar = () => {
         setDis2({display:"none"});
      }
   return (
-    <div className='sm:p-3 z-50 sticky'>
+    <div className='sm:p-3 z-50 sticky top-0 left-0 bg-white'>
     <div className='flex items-center justify-between z-50'>
       <div className='sm:flex justify-center items-center gap-10'>
        <div className='text-blue-700 text-3xl font-bold hidden sm:block'>Coursereview</div>
