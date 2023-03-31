@@ -23,8 +23,8 @@ const TopCourseCard = () => {
      </div>
      <hr className='bg-zinc-600'/>
      <div className='flex items-center justify-between'>
-      <button className='bg-blue-600 text-white px-5 py-3 rounded-3xl font-semibold m-4 sm:m-1 sm:p-2'>Rate Course</button>
-      <button className=' bg-blue-600 text-white px-5 py-3 rounded-3xl font-semibold m-4'>Buy Now</button>
+      <button className='bg-blue-600 text-white w-36 h-10 rounded-3xl font-semibold m-4 sm:w-44'>Rate Course</button>
+      <button className=' bg-blue-600 text-white w-36 h-10 rounded-3xl font-semibold m-4 sm:w-44'>Buy Now</button>
      </div>
     </div>
   )
