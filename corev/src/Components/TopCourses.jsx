@@ -1,10 +1,10 @@
-import React from 'react'
-import TopCourseCard from './TopCourseCard'
-import "slick-carousel/slick/slick.css"; 
+import React from "react";
+import TopCourseCard from "./TopCourseCard";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { SlidearrowB,SlidearrowF } from './Slidearrow';
-const Topcourses = ({title}) => {
+import { SlidearrowB, SlidearrowF } from "./Slidearrow";
+const Topcourses = ({ title }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -12,7 +12,7 @@ const Topcourses = ({title}) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SlidearrowF/>,
+    nextArrow: <SlidearrowF />,
     prevArrow: <SlidearrowB />,
     responsive: [
       {
@@ -21,44 +21,44 @@ const Topcourses = ({title}) => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
-    <div className='text-2xl font-bold m-5'>{title}</div>
-    {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
-          
-           <Slider {...settings}>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            </Slider>
-        {/* </div> */}
-    </>
-  )
-}
+      <div className="text-2xl font-bold m-5">{title}</div>
+      {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
 
-export default Topcourses
+      <Slider {...settings}>
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+        <TopCourseCard />
+      </Slider>
+      {/* </div> */}
+    </>
+  );
+};
+
+export default Topcourses;

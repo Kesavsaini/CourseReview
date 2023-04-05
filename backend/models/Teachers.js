@@ -5,6 +5,7 @@ const TeacherSchema = new mongoose.Schema({
     catogries:{type:Array},
     rating:{type:Number,default:0},
     img:{type:String,required:true},
+    desc:{type:String,required:true}
 },{timestamps:true});
   
 const Teacher=mongoose.model('Teacher',TeacherSchema);
