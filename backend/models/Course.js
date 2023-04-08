@@ -7,6 +7,7 @@ const CourseSchema = new mongoose.Schema({
     rating:{type:Number,default:0},
     img:{type:String},
     desc:{type:String,required:true},
+    studentno:{type:Number,default:0}
 },{timestamps:true});
   
-const Course=mongoose.model('Course',CourseSchema);
+module.exports=mongoose.model('Course',CourseSchema);

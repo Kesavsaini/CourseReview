@@ -8,4 +8,4 @@ const TeacherSchema = new mongoose.Schema({
     desc:{type:String,required:true}
 },{timestamps:true});
   
-const Teacher=mongoose.model('Teacher',TeacherSchema);
+module.exports=mongoose.model('Teacher',TeacherSchema);

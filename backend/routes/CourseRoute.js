@@ -14,7 +14,7 @@ router.post('/newcourse',async(req,res)=>{
 // getting a course by id
 router.get('/get/course/:id',async(req,res)=>{
      try{
-        const course=await Course.findbyId(req.params.id);
+        const course=await Course.findById(req.params.id);
         res.status(200).send(course);
      }catch(err){
       console.log(err);
@@ -45,7 +45,7 @@ router.get('/get/courses',async(req,res)=>{
 // updating a course
 router.put('/update/course/:id',async(req,res)=>{
   try{
-     const course=await Course.findbyIdAndUpdate(req.params.id,{$set:req.body},{new:true});
+     const course=await Course.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true});
      res.status(200).send(course);
   }catch(err){
    console.log(err);
@@ -55,7 +55,7 @@ router.put('/update/course/:id',async(req,res)=>{
 //deleting a course
 router.delete('/delete/course/:id',async(req,res)=>{
   try{
-     await Course.findbyIdAndUpdate(req.params.id);
+     await Course.findByIdAndUpdate(req.params.id);
      res.status(200).send("This course has been deleted");
   }catch(err){
    console.log(err);

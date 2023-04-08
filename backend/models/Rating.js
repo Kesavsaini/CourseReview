@@ -7,6 +7,7 @@ const RatingSchema = new mongoose.Schema({
    instructor:{type:Number,required:true},
    duration:{type:Number,required:true},
    skillup:{type:Number,required:true},
+   avg:{type:Number,default:0}
 },{timestamps:true});
   
-const Rating=mongoose.model('Rating',RatingSchema);
+module.exports=mongoose.model('Rating',RatingSchema);

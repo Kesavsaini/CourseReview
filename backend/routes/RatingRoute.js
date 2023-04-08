@@ -1,25 +1,42 @@
 const router=require("express").Router();
-const Teacher=require("../models/Teachers");
-//post a teacher
-router.post('/newteacher',async(req,res)=>{
-    const teacher=new Teacher(req.body);
+const Rating=require("../models/Rating");
+const Course=require("../models/Course");
+//post a rating of a course
+router.post('/newrating/:courseid',async(req,res)=>{
+    let avgRating;
+    if(req.body) req.body.expectations+req.body.instructor+req.body.duration+req.body.skillup;
+    avgRating/=4;
+    const rating=new Rating({...req.body,courseId:rea.params.courseid,avg:avgRating});
     try{
-     const newteacher=await teacher.save();
-     res.status(200).json(newteacher);
+     const newrating=await rating.save();
+     const course=await Course.findById(req.params.courseid);
+     let newcourserating=(course.rating+newrating.avg)/(course.studentno+1);
+     await Course.findByIdAndUpdate(req.params.courseid,{$set:{"studentno":course.studentno+1,"rating":newcourserating}},{new:true})
+     res.status(200).json(newrating);
    }catch(err){
     console.log(err);
     res.json(err);
    }
 });
-// getting a teacher by id
-router.get('/get/teacher/:id',async(req,res)=>{
+// getting all ratings by courseid
+router.get('/get/courserating/:courseid',async(req,res)=>{
      try{
-        const teacher=await Teacher.findById(req.params.id);
-        res.status(200).send(teacher);
+        const ratings=await Rating.find({courseId:req.params.courseid});
+        res.status(200).send(ratings);
      }catch(err){
       console.log(err);
       res.json(err);
      }
+})
+// getting all ratings by userid
+router.get('/get/userrating/:userid',async(req,res)=>{
+  try{
+     const ratings=await Rating.find({courseId:req.params.courseid});
+     res.status(200).send(ratings);
+  }catch(err){
+   console.log(err);
+   res.json(err);
+  }
 })
 // getting all teachers 
 router.get('/get/teachers',async(req,res)=>{
