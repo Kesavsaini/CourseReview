@@ -31,7 +31,7 @@ router.get('/get/courserating/:courseid',async(req,res)=>{
 // getting all ratings by userid
 router.get('/get/userrating/:userid',async(req,res)=>{
   try{  
-    const ratings=await Rating.find({courseId:req.params.courseid});
+    const ratings=await Rating.find({userId:req.params.courseid});
      res.status(200).send(ratings);
   }catch(err){
    console.log(err);
