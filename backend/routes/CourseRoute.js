@@ -1,7 +1,8 @@
 const router=require("express").Router();
 const Course=require("../models/Course");
+const {verifyToken,verifyAutherziationandToken,verifyAdminandToken}=require('../verify');
 //post a course
-router.post('/newcourse',async(req,res)=>{
+router.post('/newcourse',verifyAdminandToken,async(req,res)=>{
     const course=new Course(req.body);
     try{
      const newcourse=await course.save();

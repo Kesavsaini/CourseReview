@@ -5,6 +5,7 @@ const courseRoute=require('./routes/CourseRoute');
 const teacherRoute=require('./routes/TeacherRoute');
 const ratingRoute=require('./routes/RatingRoute');
 const authRoute=require('./routes/authRoute');
+const userRoute=require('./routes/UserRoute');
 const app = express()
 const port = 3001
 app.use(express.json())
@@ -14,6 +15,7 @@ app.use('/api/',courseRoute);
 app.use('/api/',teacherRoute);
 app.use('/api/',ratingRoute);
 app.use('/api/',authRoute);
+app.use('/api/',userRoute);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

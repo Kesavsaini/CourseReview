@@ -3,7 +3,7 @@ const User=require('../models/User');
 const CryptoJS = require("crypto-js");
 const jwt = require('jsonwebtoken');
 //create a user
-router.post('/auth/create/',async(req,res)=>{
+router.post('/auth/create',async(req,res)=>{
     const user=new User({
         name:req.body.firstname+" "+req.body.lastname,
         email:req.body.email,
@@ -18,7 +18,7 @@ router.post('/auth/create/',async(req,res)=>{
     }
 });
 //login a user
-router.post('/auth/login/',async(req,res)=>{
+router.post('/auth/login',async(req,res)=>{
     try{
         const user=await User.findOne({email:req.body.email});
         if(!user) res.status(401).json("Wrong credentials");
@@ -34,5 +34,5 @@ router.post('/auth/login/',async(req,res)=>{
         console.log(err);
         res.json(err);
     }
-})
+});
 module.exports=router;
