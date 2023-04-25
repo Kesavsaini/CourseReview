@@ -1,7 +1,8 @@
 const router=require("express").Router();
 const Teacher=require("../models/Teachers");
+const {verifyToken,verifyAutherziationandToken,verifyAdminandToken}=require('../verify');
 //post a teacher
-router.post('/newteacher',async(req,res)=>{
+router.post('/newteacher',verifyAdminandToken,async(req,res)=>{
     const teacher=new Teacher(req.body);
     try{
      const newteacher=await teacher.save();
@@ -43,7 +44,7 @@ router.get('/get/teachers',async(req,res)=>{
   }
 })
 // updating a teacher
-router.put('/update/teacher/:id',async(req,res)=>{
+router.put('/update/teacher/:id',verifyAdminandToken,async(req,res)=>{
   try{
      const teacher=await Teacher.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true});
      res.status(200).send(teacher);
@@ -53,7 +54,7 @@ router.put('/update/teacher/:id',async(req,res)=>{
   }
 })
 //deleting a teacher
-router.delete('/delete/teacher/:id',async(req,res)=>{
+router.delete('/delete/teacher/:id',verifyAdminandToken,async(req,res)=>{
   try{
      await Teacher.findByIdAndUpdate(req.params.id);
      res.status(200).send("This teacher has been deleted");

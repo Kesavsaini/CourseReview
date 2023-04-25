@@ -7,7 +7,8 @@ router.post('/auth/create',async(req,res)=>{
     const user=new User({
         name:req.body.firstname+" "+req.body.lastname,
         email:req.body.email,
-        password:CryptoJS.AES.encrypt(req.body.password, 'koxxcrate123').toString()
+        password:CryptoJS.AES.encrypt(req.body.password, 'koxxcrate123').toString(),
+        isAdmin:req.body.isAdmin
       });
     try{
       const newuser=await user.save();
