@@ -70,8 +70,9 @@ router.delete('/delete/rating/:ratingid',verifyToken,async(req,res)=>{
      if(oldrating.userId===req.user.id){
      const course=await Course.findById(oldrating.courseId);
      let newrating=(course.rating*course.studentno)-(oldrating.avg);
-     newrating/=(course.studentno-1);
-     await Course.findByIdAndUpdate(oldrating.courseId,{$set:{"rating":newrating}},{new:true});
+     if(course.studentno>1) newrating/=(course.studentno-1);
+     else newrating=0;
+     await Course.findByIdAndUpdate(oldrating.courseId,{$set:{"rating":newrating,"studentno":course.studentno-1}},{new:true});
      await Rating.findByIdAndDelete(req.params.ratingid);
      res.status(200).send("This teacher has been deleted");
      }else res.status(401).json("Unautherized");
