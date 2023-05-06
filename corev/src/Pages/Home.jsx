@@ -23,7 +23,7 @@ const Home = () => {
           <TopCourses title='Top Courses by Edx'/>
           <HomeSlider title='Top Course sites'/>
           <EducatorSlider title='Top Educators'/>
-          <div className='text-2xl font-bold mx-5 sm:mx-32 my-10'>Testimonials</div>
+          <div className='text-2xl font-bold mx-5 sm:mx-32 my-10'>Testionials</div>
           <div className='sm:flex'>
           <Testimonials/>
           <Testimonials/>
