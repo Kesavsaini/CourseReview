@@ -14,7 +14,6 @@ import EducatorSlider from '../Components/EducatorSlider'
 const Home = () => {
   return (
     <div>
-       <Navbar/>
         <div>
           <TopHomecard/>
           <TopCourses title='Top Courses'/>

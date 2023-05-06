@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Dehaze from '@mui/icons-material/Dehaze';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
    const [dis1, setDis1] = useState({ display: "none" })
    const [dis2, setDis2] = useState({ display: "block" })
@@ -13,16 +14,14 @@ const Navbar = () => {
       setDis2({ display: "none" });
    }
    return (
-      <div className='sm:p-3 z-50 sticky'>
+      <div className='sm:p-3 z-50 sticky top-0 bg-white'>
          <div className='flex items-center justify-between z-50'>
             <div className='sm:flex justify-center items-center gap-10'>
-               <div className='text-blue-700 text-3xl font-bold hidden sm:block'>Coursereview</div>
+            <Link to="/"> <div className='text-blue-700 text-3xl font-bold hidden sm:block'>Coursereview</div></Link>  
                <div className='p-3 sm:flex flex-row gap-5 text-xl font-semibold hidden z-50'>
-                  <a href="">Home</a>
-                  <a href="">Rate</a>
-                  <a href="">Courses</a>
-                  <a href="">Coupouns</a>
-                  <a href="">About</a>
+               <Link to="/"><a href="">Home</a></Link>    
+               <Link to="/rate"><a href="">Rate</a></Link> 
+               <Link to="/course"><a href="">Course</a></Link> 
                </div>
                <div className='' onClick={openit} style={dis2}>
                   <div className='sm:hidden'>

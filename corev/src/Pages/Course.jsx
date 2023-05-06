@@ -13,7 +13,6 @@ import CoursePageCard from '../Components/CoursePageCard'
 const Course = () => {
   return (
     <div>
-       <Navbar/>
        <div>
       <CoursePageCard/>
         <CoursesSlider/>

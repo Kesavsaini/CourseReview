@@ -8,7 +8,6 @@ import TopCourses from '../Components/TopCourses'
 const Rate = () => {
     return (
         <div>
-            <Navbar />
             <div>
                 <RateCard />
                 <div className='text-3xl font-bold mx-5 flex items-center justify-center sm:mx-32 my-10 text-gray-700'>Rate your experience</div>
