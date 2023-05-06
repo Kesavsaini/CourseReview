@@ -35,13 +35,10 @@ const Navbar = () => {
                   </div>
                   <div className='p-3 flex flex-col gap-3 text-xl font-extrabold'>
                   <Link to="/"><a href="">Home</a></Link>    
-<<<<<<< HEAD
                     <Link to="/rate"><a href="">Rate</a></Link> 
                     <Link to="/course"><a href="">Course</a></Link> 
-=======
                <Link to="/rate"><a href="">Rate</a></Link> 
                <Link to="/course"><a href="">Course</a></Link> 
->>>>>>> dd690749091d1509ee671457b9843c803cf47534
                   </div>
                </div>
             </div>
