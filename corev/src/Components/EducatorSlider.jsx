@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SlidearrowB,SlidearrowF } from './Slidearrow';
-const Topcourses = ({title}) => {
+import CategoryCard from './CategoryCard';
+import TopEducaterCard from './TopEducaterCard';
+const EducatorSlider = ({title}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -12,7 +14,7 @@ const Topcourses = ({title}) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SlidearrowF/>,
+    nextArrow: <SlidearrowF t={0} r={0}/>,
     prevArrow: <SlidearrowB />,
     responsive: [
       {
@@ -47,18 +49,18 @@ const Topcourses = ({title}) => {
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
+            <TopEducaterCard/>
             </Slider>
         {/* </div> */}
     </>
   )
-}
+}   
 
-export default Topcourses
+export default EducatorSlider

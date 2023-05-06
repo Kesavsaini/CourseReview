@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SlidearrowB,SlidearrowF } from './Slidearrow';
-const Topcourses = ({title}) => {
+import CourseTopCard from './CourseTopCard';
+const CoursesSlider = ({title}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -47,18 +48,18 @@ const Topcourses = ({title}) => {
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
-            <TopCourseCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
+            <CourseTopCard/>
             </Slider>
         {/* </div> */}
     </>
   )
 }
 
-export default Topcourses
+export default CoursesSlider

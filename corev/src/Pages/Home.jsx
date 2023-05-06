@@ -1,35 +1,33 @@
 import React from 'react'
-import { Categories } from '../Components/Categories'
 import Navbar from '../Components/Navbar'
 import Testimonials from '../Components/Testimonials'
 import TopCourseCard from '../Components/TopCourseCard'
 import TopCourses from '../Components/TopCourses'
 import TopEducaterCard from '../Components/TopEducaterCard'
-import TopEducaters from '../Components/TopEducaters'
+import TopHomecard from '../Components/TopHomecard'
+import CategoryCard from '../Components/CategoryCard'
+import CategorySlider from '../Components/CategorySlider'
+import TopCourseSites from '../Components/TopCourseSites'
+import HomeSlider from '../Components/HomeSlider'
+import EducatorSlider from '../Components/EducatorSlider'
 
 const Home = () => {
   return (
     <div>
        <Navbar/>
-        <div className='p-3'>
-        <div className=''>
-           <div className='text-2xl font-bold m-5'>Catogries</div>
-           <div className='flex flex-row gap-5 justify-center items-center flex-wrap sm:justify-start'>
-            <Categories title='Technology' col='red'/>
-            <Categories title='Politics' col='red'/>
-            <Categories title='Science' col='red'/>
-            <Categories title='History' col='red'/>
-           </div>
-           </div>
+        <div>
+          <TopHomecard/>
           <TopCourses title='Top Courses'/>
-          <TopEducaters title='Top Educaters'/>
-          <div>
-          <div className='text-2xl font-bold m-5'>Testimonials</div>
-          <div className='flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:justify-between sm:items-start'>
-            <Testimonials/>
-            <Testimonials/>
-            <Testimonials/>
-          </div>
+          <CategorySlider title='Top Categories'/>
+          <TopCourses title='Top Courses by Coursera'/>
+          <TopCourses title='Top Courses by Edx'/>
+          <HomeSlider title='Top Course sites'/>
+          <EducatorSlider title='Top Educators'/>
+          <div className='text-2xl font-bold mx-5 sm:mx-32 my-10'>Testimonials</div>
+          <div className='sm:flex'>
+          <Testimonials/>
+          <Testimonials/>
+          <Testimonials/>
           </div>
         </div>
     </div>
