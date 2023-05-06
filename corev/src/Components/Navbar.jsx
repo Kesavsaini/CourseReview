@@ -34,11 +34,9 @@ const Navbar = () => {
                      <CloseIcon style={{ fontSize: '40px' }} />
                   </div>
                   <div className='p-3 flex flex-col gap-3 text-xl font-extrabold'>
-                     <a href="">Home</a>
-                     <a href="">Rate</a>
-                     <a href="">Courses</a>
-                     <a href="">Coupouns</a>
-                     <a href="">About</a>
+                  <Link to="/"><a href="">Home</a></Link>    
+                    <Link to="/rate"><a href="">Rate</a></Link> 
+                    <Link to="/course"><a href="">Course</a></Link> 
                   </div>
                </div>
             </div>
