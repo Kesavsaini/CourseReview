@@ -4,13 +4,17 @@ import Rate from './Pages/Rate'
 import Course from './Pages/Course'
 import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
 import Navbar from './Components/Navbar'
+import Register from './Pages/Register'
+import Login from './Pages/Login'
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Routes>
-      <Route path='/'  element={<Home/>}/>} />
+      <Route path='/'  element={<Home/>}/>
+      <Route path='/Login'  element={<Login/>}/>
+      <Route path='/register'  element={<Register/>}/>
       <Route path='/rate' element={<Rate/>} />
       <Route path='/course' element={<Course/>} />
   </Routes>
