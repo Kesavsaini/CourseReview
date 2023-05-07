@@ -8,7 +8,7 @@ const Topcourses = ({title,courses}) => {
   // console.log(courses[0]);
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -44,13 +44,15 @@ const Topcourses = ({title,courses}) => {
   };
   return (
     <>
-    <div className='text-2xl font-bold m-5'>title</div>
+    <div className='text-2xl font-bold m-5'>{title}</div>
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>
             {
               courses && courses.map((dta)=>(
-                <TopCourseCard dta={dta}/>
+                
+                dta &&  <TopCourseCard data={dta}/>
+                
               ))
             }
             

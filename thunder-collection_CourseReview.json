@@ -1,0 +1,418 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CourseReview",
+    "dateExported": "2023-05-07T10:23:37.842Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "course",
+            "containerId": "",
+            "created": "2023-04-08T11:58:14.658Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "teachers",
+            "containerId": "",
+            "created": "2023-04-08T12:24:01.457Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "rating",
+            "containerId": "",
+            "created": "2023-04-11T12:47:17.990Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "d1db10e0-3c49-48a0-b1a6-e62b39f2edf9",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-04-23T12:39:24.933Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "36e96710-8d8b-47c7-8827-24a073484f81",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-04-24T12:58:11.413Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "493194b1-de83-4c20-9174-60e813517838",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "post",
+            "url": "http://localhost:3001/api/newcourse",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-05T13:03:42.749Z",
+            "modified": "2023-04-25T12:43:43.713Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDdjOTZkMmFmMTdkMzhlNWVkMzZhOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjQyNjU4NSwiZXhwIjoxNjgzMDMxMzg1fQ.EfJSH-Z8ehviwdS7n2QZWGUEeEZXODE9Fkv7-lXeuqA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"python\",\n  \"platform\": \"nptel\",\n  \"teacher\": \"Keshav\",\n  \"catogries\": \"datascience\",\n  \"img\": \"asada\",\n  \"desc\": \"This is an good course\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "aab47acc-4be1-406f-b8c6-9c5685813992",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "post",
+            "url": "http://localhost:3001/api/newteacher",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-08T12:24:01.457Z",
+            "modified": "2023-04-08T12:25:25.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"keshav\",\n  \"platform\": \"coursera\",\n  \"catogries\": \"programming\",\n  \"rating\": 4,\n  \"img\": \"asada\",\n  \"desc\": \"This is an good teacher\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ff585299-8d40-4c4c-9a84-2a1e63d0954c",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "update",
+            "url": "http://localhost:3001/api/update/course/642ec630a634f524a0bc1a61",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-04-08T12:10:44.612Z",
+            "modified": "2023-04-08T12:12:24.286Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc\": \"This is an very good course\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "61f53d15-97d7-4fa2-9c48-ceb92a634a21",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "update",
+            "url": "http://localhost:3001/api/update/course/642ec630a634f524a0bc1a61",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-04-08T12:24:01.458Z",
+            "modified": "2023-04-08T12:24:01.457Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc\": \"This is an very good course\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4b5f6279-11c4-4479-89cd-9d4aab9fafae",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "Delete",
+            "url": "http://localhost:3001/api/update/course/642ec630a634f524a0bc1a61",
+            "method": "PUT",
+            "sortNum": 17500,
+            "created": "2023-04-08T12:13:32.192Z",
+            "modified": "2023-04-08T12:13:32.192Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc\": \"This is an very good course\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "645414c9-3c6c-4125-9ea3-888b930c20cb",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "Delete",
+            "url": "http://localhost:3001/api/update/course/642ec630a634f524a0bc1a61",
+            "method": "PUT",
+            "sortNum": 17500,
+            "created": "2023-04-08T12:24:01.459Z",
+            "modified": "2023-04-08T12:24:01.457Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc\": \"This is an very good course\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "06e737bd-f848-47b1-8862-fb36e571f798",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "getbyid",
+            "url": "http://localhost:3001/api/get/course/6447caff2af17d38e5ed36ac",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-08T11:57:42.508Z",
+            "modified": "2023-04-25T12:54:03.942Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "010ab2a9-d919-41ef-ab46-9315d5a3ad43",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "0b5604ab-0a60-4d36-be88-1c46c7d1afda",
+            "name": "getall",
+            "url": "http://localhost:3001/api/get/courses?platform=coursera&catogery=programming",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-08T12:03:46.696Z",
+            "modified": "2023-04-08T12:10:20.977Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "platform",
+                    "value": "coursera",
+                    "isPath": false
+                },
+                {
+                    "name": "catogery",
+                    "value": "programming",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "bc525b25-50ae-44fa-93ee-f78be9b7669b",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "getbyid",
+            "url": "http://localhost:3001/api/get/course/642ec630a634f524a0bc1a61",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-08T12:24:01.460Z",
+            "modified": "2023-04-08T12:24:01.457Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "830499a6-0d7d-4563-b92c-416f21172884",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "b2dc10a4-036e-43ac-87c3-cf70b4ec1591",
+            "name": "getall",
+            "url": "http://localhost:3001/api/get/teachers?platform=coursera&catogery=programming",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-08T12:24:01.461Z",
+            "modified": "2023-05-07T10:00:53.371Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "platform",
+                    "value": "coursera",
+                    "isPath": false
+                },
+                {
+                    "name": "catogery",
+                    "value": "programming",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b98ba674-cdfd-4246-b07c-96e243226348",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "post",
+            "url": "http://localhost:3001/api/newrating/6447caff2af17d38e5ed36ac",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-11T12:48:44.177Z",
+            "modified": "2023-04-25T12:50:25.225Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDdjOTZkMmFmMTdkMzhlNWVkMzZhOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjQyNjU4NSwiZXhwIjoxNjgzMDMxMzg1fQ.EfJSH-Z8ehviwdS7n2QZWGUEeEZXODE9Fkv7-lXeuqA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"comment\":\"Very good course bro\",\n   \"expectations\":3,\n   \"instructor\":2,\n   \"duration\":5,\n   \"skillup\":1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3d1d571c-86f4-42ee-ad25-bf01d001f6ab",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "d1db10e0-3c49-48a0-b1a6-e62b39f2edf9",
+            "name": "singnup",
+            "url": "http://localhost:3001/api/auth/create",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-04-23T12:39:36.759Z",
+            "modified": "2023-04-25T12:37:01.469Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"firstname\":\"akshit\",\n    \"lastname\":\"kumar\",\n    \"email\":\"akshitkumar@gmail.com\",\n    \"password\":\"12345678\",\n    \"isAdmin\":true\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0576e7db-3e6b-4c55-ae4a-b1e8be8924ca",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "d1db10e0-3c49-48a0-b1a6-e62b39f2edf9",
+            "name": "login",
+            "url": "http://localhost:3001/api/auth/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-04-23T12:39:46.285Z",
+            "modified": "2023-04-25T12:43:05.161Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"email\":\"akshitkumar@gmail.com\",\n \"password\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "db37e7cf-dfa8-43a0-9f3e-a05866ffce4f",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "update rating",
+            "url": "http://localhost:3001/api/update/rating/6447ccda08e878d448b40d53",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2023-04-25T13:10:23.926Z",
+            "modified": "2023-04-25T13:14:07.012Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDdjOTZkMmFmMTdkMzhlNWVkMzZhOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjQyNjU4NSwiZXhwIjoxNjgzMDMxMzg1fQ.EfJSH-Z8ehviwdS7n2QZWGUEeEZXODE9Fkv7-lXeuqA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"skillup\":4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "38160df1-79c1-4224-aaf0-6efd03392de6",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "36e96710-8d8b-47c7-8827-24a073484f81",
+            "name": "get a user",
+            "url": "http://localhost:3001/api/user/get/64452a586c0a2dd8a8bf1a0c",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-04-24T12:58:27.467Z",
+            "modified": "2023-04-24T13:12:47.514Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDUyYTU4NmMwYTJkZDhhOGJmMWEwYyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzMzkxMDgsImV4cCI6MTY4Mjk0MzkwOH0.l1CTKo4NrXly_vapHz6bFtIGO1tN4ZpIVywz07LXxJ8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1b02fba9-809d-4334-900e-d5cb39aa0bea",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "delete rating",
+            "url": "http://localhost:3001/api/delete/rating/6447ccda08e878d448b40d53",
+            "method": "DELETE",
+            "sortNum": 67500,
+            "created": "2023-04-25T13:17:04.461Z",
+            "modified": "2023-04-25T13:21:28.042Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDdjOTZkMmFmMTdkMzhlNWVkMzZhOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjQyNjU4NSwiZXhwIjoxNjgzMDMxMzg1fQ.EfJSH-Z8ehviwdS7n2QZWGUEeEZXODE9Fkv7-lXeuqA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e4599b96-4749-40a1-9a99-f153888255e9",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "36e96710-8d8b-47c7-8827-24a073484f81",
+            "name": "update",
+            "url": "http://localhost:3001/api/user/update/64452a586c0a2dd8a8bf1a0c",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-04-25T12:05:07.615Z",
+            "modified": "2023-04-25T12:07:16.764Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDUyYTU4NmMwYTJkZDhhOGJmMWEwYyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzMzkxMDgsImV4cCI6MTY4Mjk0MzkwOH0.l1CTKo4NrXly_vapHz6bFtIGO1tN4ZpIVywz07LXxJ8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"keshav\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "56a0d2bb-9ccb-4b02-9885-1d7f7204557a",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "getallratingbycourseid",
+            "url": "http://localhost:3001/api/get/courserating/6447caff2af17d38e5ed36ac",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-04-25T12:59:56.241Z",
+            "modified": "2023-04-25T13:00:52.942Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "75773389-402e-404e-b41f-7164340030cc",
+            "colId": "5346c51c-cd89-46de-80a8-c908ac4ceb0d",
+            "containerId": "a54d49f0-4756-42ee-a427-6daf15fa8257",
+            "name": "getallratingbyuserid ",
+            "url": "http://localhost:3001/api/get/userrating/6447c96d2af17d38e5ed36a8",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-04-25T13:01:10.858Z",
+            "modified": "2023-04-25T13:03:49.970Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

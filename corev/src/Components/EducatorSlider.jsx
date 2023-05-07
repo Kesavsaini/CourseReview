@@ -6,10 +6,10 @@ import Slider from "react-slick";
 import { SlidearrowB,SlidearrowF } from './Slidearrow';
 import CategoryCard from './CategoryCard';
 import TopEducaterCard from './TopEducaterCard';
-const EducatorSlider = ({title}) => {
+const EducatorSlider = ({title,teachers}) => {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -49,14 +49,12 @@ const EducatorSlider = ({title}) => {
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
-            <TopEducaterCard/>
+            {
+              teachers && teachers.map((data)=>(
+                data && <TopEducaterCard data={data}/>
+              ))
+            }
+            
             </Slider>
         {/* </div> */}
     </>
