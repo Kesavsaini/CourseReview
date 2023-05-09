@@ -20,7 +20,6 @@ const Navbar = () => {
             <Link to="/"> <div className='text-blue-700 text-3xl font-bold hidden sm:block'>Coursereview</div></Link>  
                <div className='p-3 sm:flex flex-row gap-5 text-xl font-semibold hidden z-50'>
                <Link to="/"><a href="">Home</a></Link>    
-               <Link to="/rate"><a href="">Rate</a></Link> 
                <Link to="/course"><a href="">Course</a></Link> 
                </div>
                <div className='' onClick={openit} style={dis2}>
@@ -35,10 +34,7 @@ const Navbar = () => {
                   </div>
                   <div className='p-3 flex flex-col gap-3 text-xl font-extrabold'>
                   <Link to="/"><a href="">Home</a></Link>    
-                    <Link to="/rate"><a href="">Rate</a></Link> 
                     <Link to="/course"><a href="">Course</a></Link> 
-               <Link to="/rate"><a href="">Rate</a></Link> 
-               <Link to="/course"><a href="">Course</a></Link> 
                   </div>
                </div>
             </div>
