@@ -21,8 +21,6 @@ const [teachers,setTeachers]=useState([]);
       try {
         const res = await axios.get('http://localhost:3001/api/get/courses');
         settCourses(res.data);
-
-        
       } catch (error) {
         console.error(error);
       }

@@ -14,12 +14,10 @@ const UserRating = ({courseid}) => {
         const headers = {
             'token':`Bearer ${token}`
           }
-          console.log(headers.token)
         try{
             const body={expectations,instructor,duration,skillup,comment};
             console.log(body);
             const res=await axios.post(`http://localhost:3001/api/newrating/${courseid}`,body,{headers:headers});
-            console.log(res.data);
         }catch(err){
             console.log(err);
         }

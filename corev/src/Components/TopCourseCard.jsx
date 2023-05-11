@@ -2,8 +2,6 @@ import React from 'react'
 import Rating from '@mui/material/Rating';
 import {NavLink, Navigate,Link} from "react-router-dom"
 const TopCourseCard = ({data}) => {
-
-  console.log(data)
   return (
     <div className='w-[96%] shadow rounded-xl p-5 sm:w-80 sm:h-auto m-2'>
     <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/24185535/Online-Learning.jpg" alt="" className='rounded-xl -z-20' />

@@ -5,7 +5,7 @@ const {verifyToken,verifyAutherziationandToken,verifyAdminandToken}=require('../
 //post a rating of a course
 router.post('/newrating/:courseid',verifyToken,async(req,res)=>{
     try{
-      const checkuser=await Rating.findOne({userId:req.user.id});
+      const checkuser=await Rating.findOne({userId:req.user.id,courseId:req.params.courseid});
       if(!checkuser){
       let avgRating;
       if(req.body) avgRating=req.body.expectations+req.body.instructor+req.body.duration+req.body.skillup;

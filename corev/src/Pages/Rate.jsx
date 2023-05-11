@@ -15,8 +15,6 @@ const Rate = () => {
         const getReview=async()=>{
             try{
                 const res=await axios.get(`http://localhost:3001/api/get/courserating/${courseid}`);
-                console.log("ratings of this course"+ res.data);
-                console.log(res.data);
                 setReview(res.data);
             }catch(err){
                 console.log(err);
@@ -28,7 +26,7 @@ const Rate = () => {
     return (
         <div>
             <div>
-                <RateCard />
+                <RateCard courseid={courseid}/>
                 <div className='text-3xl font-bold mx-5 flex items-center justify-center sm:mx-32 my-10 text-gray-700'>Rate your experience</div>
                 <UserRating courseid={courseid}/>
                 <div className='text-3xl font-bold mx-5 flex items-center justify-center sm:mx-32 my-10 text-gray-700'>Other Reviews</div>

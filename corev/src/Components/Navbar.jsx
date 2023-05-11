@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import Dehaze from '@mui/icons-material/Dehaze';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
+   const navigate=useNavigate();
    const [dis1, setDis1] = useState({ display: "none" })
    const [dis2, setDis2] = useState({ display: "block" })
+   const [stext,setStext]=useState("");
+   const handleEnter=(e)=>{
+      if(e.key==='Enter'){
+        navigate(`/course/${e.target.value}`);
+      }
+   }
    const closeit = () => {
       setDis1({ display: "none" });
       setDis2({ display: "block" });
@@ -39,7 +47,7 @@ const Navbar = () => {
                </div>
             </div>
             <div className=''>
-               <input type="text" className='w-52 border border-black rounded-full outline-none p-1 border-none shadow sm:w-96 sm:p-3' placeholder='Search here' />
+               <input type="text" className='w-52 border border-black rounded-full outline-none p-1 border-none shadow sm:w-96 sm:p-3' placeholder='Search here' onChange={(e)=>setStext(e.target.value)} onKeyDown={(e)=>handleEnter(e)}/>
             </div>
             <div className='w-12 h-12 rounded-full'>
                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" className='w-12 h-12 rounded-full bg-cover' />

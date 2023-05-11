@@ -11,7 +11,6 @@ const Login = () => {
        try{
          const res=await axios.post('http://localhost:3001/api/auth/login',{email,password});
          dispatch(login(res.data));
-         console.log(res.data);
        }catch(err){
         console.log(err);
        }

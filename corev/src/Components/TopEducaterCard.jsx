@@ -9,7 +9,6 @@ const Catogory=({text})=>{
     )
 }
 const TopEducaterCard = ({data}) => {
-  console.log(data);
   return (
     <div className=' w-[90%] shadow rounded-xl sm:w-80'>
     <img src="https://img.freepik.com/free-photo/portrait-businesswoman-with-notebook-talking-phone_114579-64314.jpg?w=826&t=st=1679140513~exp=1679141113~hmac=3e40f6ab4756a420fcae7cb2db695ad2e65951fd35b1bd8f53050d9c14d3cf98" alt="" className='h-[60%]' />
