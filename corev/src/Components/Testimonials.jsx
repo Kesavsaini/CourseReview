@@ -2,7 +2,7 @@ import React from 'react'
 
 const Testimonials = () => {
   return (
-    <div className='shadow p-4 w-[95%] rounded-md sm:w-96 sm:p-2 mt-4 sm:ml-24'>
+    <div className='shadow p-4 w-[95%] rounded-md sm:w-96 sm:p-2 m-4 sm:ml-24'>
      <div className='flex items-center gap-3 m-3'>
         <div className='w-16 h-16 rounded-full'>
         <img src="https://wallpapers.com/images/featured/81fi31lzmqbcg80q.jpg" alt="" className='w-16 h-16 rounded-full bg-cover'/>
