@@ -44,10 +44,10 @@ const Topcourses = ({title,courses}) => {
   };
   return (
     <>
-    <div className='text-4xl font-bold font- m-9 font-sans flex justify-center'>{title}</div>
+    <div className='text-4xl font-bold  font-sans flex justify-center'>{title}</div>
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
-           <Slider {...settings}>
+           <Slider {...settings} className='h-[100%]'>
             {
               courses && courses.map((dta)=>(
                 

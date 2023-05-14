@@ -12,7 +12,7 @@ export const SlidearrowF = (props) => {
 export const SlidearrowB = (props) => {
     const { clN, style, onClick } = props;
     return (
-      <div className={`glass2 absolute left-${props.left} w-10 h-10 rounded-full top-${props.top} flex justify-center items-center cursor-pointer`} onClick={onClick}>
+      <div className={`glass2 absolute left w-10 h-10 rounded-full top flex justify-center items-center cursor-pointer`} onClick={onClick}>
         <ArrowBackIosIcon style={{color:'white'}}/>
       </div>
     )
