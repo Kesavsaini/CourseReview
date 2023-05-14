@@ -3,9 +3,9 @@ import Rating from '@mui/material/Rating';
 import {NavLink, Navigate,Link} from "react-router-dom"
 const TopCourseCard = ({data}) => {
   return (
-    <div className='w-[96%] shadow rounded-xl p-5 sm:w-96 sm:h-auto m-2 ml-20'>
-      <div>
-    <img src={`${data.img}`} alt="" className='rounded-xl -z-20 sm:ml-14 ml-16' />
+    <div className='w-[96%] h-[100%] shadow rounded-xl p-5 sm:w-96 sm:h-96 m-3 ml-20 p-5 '>
+      <div className='sm:mt-0'>
+    <img src={`${data.img}`} alt="" className='rounded-xl  sm:ml-14 ml-16 sm:mt-0' />
     </div>
     <div className='text-xl font-semibold m-2 sm:flex sm:justify-center sm:items-center'>{data.name}</div>
     <hr className='bg-zinc-600'/>
