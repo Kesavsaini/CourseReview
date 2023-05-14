@@ -11,16 +11,16 @@ const TopHomecard = () => {
                     <div className='text-blue-600'>Course Review</div>
                 </div>
                 <ul className='text-gray-700 mt-4 font-semibold list-disc mx-4 '>
-                <li> Buy courses after reading review</li>
+                <li> Explore courses after reading review</li>
                 <li>  Rate courses on our site and help others</li>
                 </ul>
                 <div className=''>
-            <button className='w-80 bg-blue-600 text-white flex justify-center px-10 py-3 rounded-3xl mx sm:rounded-full font-semibold justify-center my-6 sm:m-1 sm:p-2 sm:my-5 sm:hover:bg-white sm:hover:text-blue-600 hover:outline-offset-2'>Buy courses</button>
+            <button className='w-80 bg-blue-600 text-white flex justify-center px-10 py-3 rounded-3xl mx sm:rounded-full font-semibold justify-center my-6 sm:m-1 sm:p-2 sm:my-5 sm:hover:bg-white sm:hover:text-blue-600 hover:outline-offset-2'>Explore courses</button>
             <button className='w-80 bg-blue-600 text-white flex justify-center px-10 py-3 rounded-3xl sm:rounded-full font-semibold justify-center my-6 sm:m-1 sm:p-2 sm:my-5 sm:hover:bg-white sm:hover:text-blue-600 hover:outline-offset-2'>Rate courses</button>
             </div>   
             </div>
-            <div className='sm:w-[40%] sm:h-[100%] sm:flex '>
-            <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/24185535/Online-Learning.jpg" alt="" className='rounded-xl -z-20 mt-4 sm:h-[110%] sm:-mt-9' />
+            <div className='sm:w-[40%] sm:h-[100%] sm:flex cursor-pointer'>
+            <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/24185535/Online-Learning.jpg" alt="" className='rounded-xl -z-20 mt-4 sm:h-[100%] sm:mt-0' />
             </div>
             </div> 
         </div>

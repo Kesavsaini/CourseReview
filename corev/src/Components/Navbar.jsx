@@ -22,13 +22,14 @@ const Navbar = () => {
       setDis2({ display: "none" });
    }
    return (
-      <div className='sm:p-3 z-50 sticky top-0 bg-white'>
+      <div className='sm:p-3 z-50 sticky top-0 bg-white shadow-lg'>
          <div className='flex items-center justify-between z-50'>
             <div className='sm:flex justify-center items-center gap-10'>
-            <Link to="/"> <div className='text-blue-700 text-3xl font-bold hidden sm:block'>Coursereview</div></Link>  
-               <div className='p-3 sm:flex flex-row gap-5 text-xl font-semibold hidden z-50'>
-               <Link to="/"><a href="">Home</a></Link>    
-               <Link to="/course"><a href="">Course</a></Link> 
+            <Link to="/"> <div className='text-black text-3xl font-bold hidden sm:block hover:text-blue-600'>Course</div></Link>  
+            <Link to="/"> <div className='text-blue-600 text-3xl font-bold hidden sm:block -ml-10 hover:text-black'>Review</div></Link>  
+               <div className='p-3 sm:flex flex-row gap-5 text-xl font-semibold hidden z-50 ml-11'>
+               <Link to="/"><a href="" className='hover:text-blue-600 hover:font-bold'>Home</a></Link>    
+               <Link to="/course"><a href="" className='hover:text-blue-600 hover:font-bold ml-8'>Course</a></Link> 
                </div>
                <div className='' onClick={openit} style={dis2}>
                   <div className='sm:hidden'>
@@ -40,17 +41,17 @@ const Navbar = () => {
                   <div className='' onClick={closeit}>
                      <CloseIcon style={{ fontSize: '40px' }} />
                   </div>
-                  <div className='p-3 flex flex-col gap-3 text-xl font-extrabold'>
+                  <div className='p-3 flex flex-col gap-3 text-xl font-extrabold hover:to-blue-600'>
                   <Link to="/"><a href="">Home</a></Link>    
                     <Link to="/course"><a href="">Course</a></Link> 
                   </div>
                </div>
             </div>
             <div className=''>
-               <input type="text" className='w-52 border border-black rounded-full outline-none p-1 border-none shadow sm:w-96 sm:p-3' placeholder='Search here' onChange={(e)=>setStext(e.target.value)} onKeyDown={(e)=>handleEnter(e)}/>
+               <input type="text" className='w-52 border border-black rounded-full  outline-none p-1 border-none shadow sm:w-96 sm:p-3' placeholder='Search courses here ...' onChange={(e)=>setStext(e.target.value)} onKeyDown={(e)=>handleEnter(e)}/>
             </div>
-            <div className='w-12 h-12 rounded-full'>
-               <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" className='w-12 h-12 rounded-full bg-cover' />
+            <div className='w-12 h-12 rounded-full cursor-pointer'>
+               <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" className=' rounded-full bg-cover' />
             </div>
          </div>
       </div>
