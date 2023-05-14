@@ -57,7 +57,7 @@ const [teachers,setTeachers]=useState([]);
           {/* <TopCourses title='Top Courses by Edx'/> */}
           <HomeSlider title='Top Course sites'/>
           <EducatorSlider title='Top Educators' teachers={teachers}/>
-          <div className='text-2xl font-bold mx-5 sm:mx-32 my-10'>Testimonials</div>
+          <div className='text-4xl font-bold font- m-9 font-sans flex justify-center'>Testimonials</div>
           <div className='sm:flex'>
           <Testimonials/>
           <Testimonials/>

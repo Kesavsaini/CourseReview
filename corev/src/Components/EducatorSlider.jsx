@@ -45,7 +45,7 @@ const EducatorSlider = ({title,teachers}) => {
   };
   return (
     <>
-    <div className='text-2xl font-bold m-5'>{title}</div>
+    <div className='text-4xl font-bold font- m-9 font-sans flex justify-center'>{title}</div>
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>

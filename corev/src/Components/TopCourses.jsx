@@ -10,8 +10,8 @@ const Topcourses = ({title,courses}) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     nextArrow: <SlidearrowF/>,
     prevArrow: <SlidearrowB />,
@@ -44,7 +44,7 @@ const Topcourses = ({title,courses}) => {
   };
   return (
     <>
-    <div className='text-2xl font-bold m-5'>{title}</div>
+    <div className='text-4xl font-bold font- m-9 font-sans flex justify-center'>{title}</div>
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
            <Slider {...settings}>
