@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Rating from '@mui/material/Rating';
 import axios from "axios";
+import { Link } from "react-router-dom";
 const Coursecard = ({data}) => {
     return (
-        <div className='w-[96%] shadow rounded-xl p-5 sm:w-[48%] m-2'>
+        <Link to={`/rate/${data.id}`}>
+        <div className='w-[96%] shadow rounded-xl p-5 sm:w-[48%] m-2 cursor-pointer'>
             <div className="sm:flex sm:flex-row-reverse">
                 <div>
                     <img src="https://c1.wallpaperflare.com/preview/471/703/720/e-learning-training-school-online-learn-knowledge.jpg" alt="" className='rounded-xl -z-20 m-px my-4' />
@@ -23,6 +25,7 @@ const Coursecard = ({data}) => {
                 </div>
             </div>
         </div>
+     </Link>
     )
 }
 export default Coursecard

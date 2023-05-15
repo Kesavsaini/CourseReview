@@ -10,7 +10,7 @@ const Catogory=({text})=>{
 }
 const TopEducaterCard = ({data}) => {
   return (
-    <div className=' w-[90%] h-[30rem] shadow rounded-xl sm:w-80 sm:h-96 m-3'>
+    <div className=' w-[95%] h-[30rem] shadow rounded-xl sm:w-80 sm:h-96 m-3'>
       <div className='flex h-[60%] rounded-xl justify-center items-center bg-blue-700'>
     <img src={`${data.img}`} alt="" className='rounded-xl shadow-black shadow-xl' />
     </div>

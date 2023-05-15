@@ -27,7 +27,7 @@ const [teachers,setTeachers]=useState([]);
     }
     const getCourse1=async()=>{
       try{
-       const res = await axios.get('http://localhost:3001/api/get/courses?platform=coursera');
+       const res = await axios.get('http://localhost:3001/api/get/courses?platform=Udemy');
        setCourses1(res.data);
       }catch(err){
         console.log(err);
@@ -53,12 +53,11 @@ const [teachers,setTeachers]=useState([]);
           <TopHomecard/>
           <TopCourses title='Top Courses' courses={tcourses}/>
           <CategorySlider title='Top Categories'/>
-          <TopCourses title='Top Courses by Coursera' courses={courses1}/>
-          {/* <TopCourses title='Top Courses by Edx'/> */}
+          <TopCourses title='Top Courses by Udemy' courses={courses1}/>
           <HomeSlider title='Top Course sites'/>
           <EducatorSlider title='Top Educators' teachers={teachers}/>
           <div className='text-4xl font-bold font- m-9 font-sans flex justify-center'>Testimonials</div>
-          <div className='sm:flex'>
+          <div className='flex flex-col justify-center sm:flex-row sm:justify-between items-center p-2'>
           <Testimonials/>
           <Testimonials/>
           <Testimonials/>

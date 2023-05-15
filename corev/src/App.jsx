@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 const App = () => {
   let user=useSelector(state=>state.userdata.user);
   return (
+    <div className=''>
     <BrowserRouter>
     <Navbar/>
     <Routes>
@@ -20,6 +21,7 @@ const App = () => {
       <Route path='/rate/:courseid'  element={user ?<Rate/>:<Navigate to="/login"/>}/>
   </Routes>
   </BrowserRouter>
+  </div>
   )
 }
 

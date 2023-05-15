@@ -13,7 +13,7 @@ const CategorySlider = ({title}) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SlidearrowF t={0} r={0}/>,
+    nextArrow: <SlidearrowF/>,
     prevArrow: <SlidearrowB />,
     responsive: [
       {

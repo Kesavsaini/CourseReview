@@ -8,13 +8,15 @@ const Topcourses = ({title,courses}) => {
   // console.log(courses[0]);
   const settings = {
     dots: false,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    speed:5000,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
-    nextArrow: <SlidearrowF/>,
-    prevArrow: <SlidearrowB />,
+    autoplay: true,
+    arrows:true,
+    nextArrow:<SlidearrowF/>,
+    prevArrow:<SlidearrowB/>,
     responsive: [
       {
         breakpoint: 1024,
@@ -23,6 +25,7 @@ const Topcourses = ({title,courses}) => {
           slidesToScroll: 3,
           infinite: true,
           dots: true
+          
         }
       },
       {
@@ -47,7 +50,7 @@ const Topcourses = ({title,courses}) => {
     <div className='text-4xl font-bold  font-sans flex justify-center'>{title}</div>
     {/* <div className='w-[100%] flex items-center justify-center gap-5 sm:flex-row sm:flex-wrap'> */}
           
-           <Slider {...settings} className='h-[100%]'>
+           <Slider {...settings} className=''>
             {
               courses && courses.map((dta)=>(
                 
