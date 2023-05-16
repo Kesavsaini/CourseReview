@@ -28,9 +28,9 @@ const UserRating = ({courseid}) => {
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" className='w-12 h-12 rounded-full bg-cover ' />
                 <div className='text-2xl font-bold mx-5 flex'>AkshitKumar</div>
             </div>
-            <div className="flex flex-col sm:flex-col-reverse sm:text-xl sm:justify-center">
-                <div className="sm:w-[100%]">
-                    <div className="sm:flex sm:flex-row sm:gap-96 sm:w-[80%] sm:justify-between">
+            <div className="flex flex-col sm:flex-col-reverse sm:text-xl sm:justify-between">
+                <div className="sm:w-[100%] sm:flex sm:flex-col sm:justify-between sm:gap-5">
+                    <div className="sm:flex sm:flex-row sm:w-[80%] sm:justify-between">
                         <div className="font-bold text-2x1  my-2 sm:w-80">Meets Expectation ?</div>
                         <div className='flex items-center gap-5 '>
                             <div className='flex items-center gap-2 mx-0'>
@@ -38,7 +38,7 @@ const UserRating = ({courseid}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:flex sm:flex-row sm:gap-96 sm:w-[80%]  sm:justify-between">
+                    <div className="sm:flex sm:flex-row  sm:w-[80%]  sm:justify-between">
                         <div className="font-bold text-2x1 my-2 ">What do you say about content ?</div>
                         <div className='flex items-center gap-5 '>
                             <div className='flex items-center gap-2 mx-0'>
@@ -46,7 +46,7 @@ const UserRating = ({courseid}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:flex sm:flex-row sm:gap-96 sm:w-[80%]  sm:justify-between">
+                    <div className="sm:flex sm:flex-row sm:w-[80%]  sm:justify-between">
                         <div className="font-bold text-2x1  my-2 ">What do you say about instructor ?</div>
                         <div className='flex items-center gap-5 '>
                             <div className='flex items-center gap-2 mx-0'>
@@ -54,7 +54,7 @@ const UserRating = ({courseid}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:flex sm:flex-row sm:gap-96 sm:w-[80%] sm:justify-between ">
+                    <div className="sm:flex sm:flex-row  sm:w-[80%] sm:justify-between ">
                         <div className="font-bold text-2x1 my-2 sm:w-80">Is the duration of course good ?</div>
                         <div className='flex items-center gap-5 '>
                             <div className='flex items-center gap-2 mx-0'>
@@ -62,7 +62,7 @@ const UserRating = ({courseid}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:flex sm:flex-row sm:gap-96 sm:w-[80%] sm:justify-between ">
+                    <div className="sm:flex sm:flex-row  sm:w-[80%] sm:justify-between ">
                         <div className="font-bold text-2x1 my-2 ">Were you able to skill up yourself ?</div>
                         <div className='flex items-center gap-5 '>
                             <div className='flex items-center gap-2 mx-0'>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import {login,logout} from '../Redux/userRedux'
+import { Link } from 'react-router-dom';
 const Login = () => {
   let dispatch=useDispatch();
   const [email,setEmail]=useState();
@@ -42,6 +43,11 @@ const Login = () => {
             <button className='w-80 bg-blue-600 text-white flex justify-center px-10 py-3 rounded-3xl mx sm:rounded-full font-semibold  my-6 mt-10 sm:m-1 sm:p-2 sm:my-5 sm:hover:bg-white sm:hover:text-blue-600 hover:outline-offset-2' onClick={(e)=>loginuser(e)}>Login </button>
           </div>
         </form>
+        <div className='text-blue-700'>
+        <Link to="/register">
+         SIGNUP
+        </Link>
+      </div>
       </div>
       </div>
     </div>
